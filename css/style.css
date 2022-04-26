@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.container {
+  width: 500px;
+  margin: 0 auto;
+  background-color: aqua;
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+
+.form {
+  width: 300px;
+}
+.title {
+  margin: 0;
+  margin: 40px 0;
+  font-size: 70px;
+}
+.form__label {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.form__label:hover {
+  cursor: pointer;
+}
+
+.form__label--control {
+  display: inline-block;
+  border: 2px solid rgb(55, 51, 51);
+  border-radius: 5px;
+  margin-right: 25px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.form__label--info {
+  font-size: 40px;
+}
+.form__label--input:disabled ~ * {
+  opacity: 0.7;
+}
+#input1:checked ~ .form__label--control {
+  background-image: url("../img/table-tennis.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#input2:checked ~ .form__label--control {
+  background-image: url("../img/basketball-ball.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#input3:checked ~ .form__label--control {
+  background-image: url("../img/volleyball-ball.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#input4:checked ~ .form__label--control {
+  background-image: url("../img/hockey-puck.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
